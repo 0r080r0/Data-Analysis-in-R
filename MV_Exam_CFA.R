@@ -1,4 +1,6 @@
-### Rape Myth Acceptance
+### Topic: Rape Myth Acceptance
+
+## Confirmatory Factor Analysis (CFA)
 
 # install & load packages
 
