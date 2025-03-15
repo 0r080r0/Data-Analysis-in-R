@@ -1,22 +1,18 @@
-# ... = name of package
-# install.packages('...')       
-install.packages('...')
-# check if installation was successful
-library(insert packagename)
+# Path Analysis in R
 
-# install lavaan for SEM
+# install packages & load libraries
 install.packages('lavaan', dependencies = TRUE)
 library(lavaan)
-
-# read in "sav." file
-
 install.packages('haven')
 yes
 library(haven)
+
+# read in "sav." file
 data <- read_sav('/Users/evangelia_karakoliou/Downloads/Album Sales.sav')
 names(data) <- c('adverts', 'sales', 'airplay', 'image')
 View(data)
 
+# define model and parameters for regression
 album_model <- ('
                 # regression
                 sales ~ adverts
@@ -28,7 +24,9 @@ album_model <- ('
                 adverts ~~ airplay
                 adverts ~~ image
                 ')
+
 library(lavaan) # re-did function, because of trouble to use sem-function
+# check model fit
 fit_album <- sem(album_model, data)
 summary (fit_album, standardize = TRUE, fit.measures = TRUE)
 
@@ -47,11 +45,11 @@ library(effectsize)
 
 parameterestimates(fit_album) # load lavaan using library function prior to this command
 
+# create linear regression model
 lm_model <- lm(sales ~., data)
 effectsize(lm_model)
 
 # bootstrapping with a random sample of 1000
-
 boots <- bootstrapLavaan(fit_album, R = 1000)
 boots <- data.frame(boots)
 
@@ -76,6 +74,7 @@ library(MVN)                          # error
 mvn(cfa_data, mvnTest = 'mardia')     # error
 cor(data)
 
+# define model
 stress_model <- ('
                  #regression
                  stress ~ satisfaction
@@ -85,6 +84,7 @@ stress_model <- ('
                  turnover_intent ~ stress
                  ')
 
+# check model fit
 stress.fit <- sem(stress_model, data) # error
 semPaths(stress.fit
          , what = 'est, std'
@@ -97,6 +97,7 @@ semPaths(stress.fit
 summary(stress.fit, standardize = TRUE, fit.measures = TRUE)
 modificationindices(stress.fit) %>% arrange(-mi) %>% head(20)
 
+# define model
 turnover_model <- ('
                    #regression
                    satisfaction ~ stress
