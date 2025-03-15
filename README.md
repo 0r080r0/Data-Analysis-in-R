@@ -1,6 +1,14 @@
 # Data-Analysis-in-R
 Examples of Data Analyses done in R
 
-# These examples are from my Research Master's, with 1 example each for a:
- - Home exam using Confirmatory Factor Analysis including Measurement Invariance Tests and Model Comparisons
- - Master's Thesis using a Meta-Analysis including Forrest and Funnel Plots, a Risk of Bias Assessment, Subgroup Analysis and Sensitivity Analysis
+# These coding examples in R are from my Research Degrees:
+
+**Research Master's:**
+ - A home exam using Confirmatory Factor Analysis (CFA) including Measurement Invariance Tests and Model Comparisons
+ - Longitudinal Structural Equation Modelling (SEM)
+ - Path Analysis
+ - My master's thesis using a Meta-Analysis, including Forrest and Funnel Plots, a Risk of Bias Assessment, Subgroup Analysis and Sensitivity Analysis
+
+**Research Bachelor's**
+ - Analyses of Confidence Intervals (CIs)
+
