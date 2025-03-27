@@ -1,7 +1,7 @@
 # Data-Analysis-in-R
 Examples of Data Analyses done in R
 
-# These coding examples in R are from my Research Degrees:
+### These coding examples in R are from my Research Degrees:
 
 **Research Master's:**
  - A home exam using Confirmatory Factor Analysis (CFA) including Measurement Invariance Tests and Model Comparisons
